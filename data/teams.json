@@ -1,0 +1,62 @@
+[
+  {
+    "team_id": "TEAM-IDENTITY",
+    "name": "Identity Operations",
+    "responsibilities": [
+      "employee access",
+      "identity lifecycle",
+      "MFA"
+    ]
+  },
+  {
+    "team_id": "TEAM-PLATFORM",
+    "name": "Platform Engineering",
+    "responsibilities": [
+      "internal APIs",
+      "service platform",
+      "deployment"
+    ]
+  },
+  {
+    "team_id": "TEAM-PEOPLE",
+    "name": "People Operations",
+    "responsibilities": [
+      "employee onboarding",
+      "HR workflows"
+    ]
+  },
+  {
+    "team_id": "TEAM-SECURITY",
+    "name": "Security Engineering",
+    "responsibilities": [
+      "security review",
+      "access policy",
+      "risk assessment"
+    ]
+  },
+  {
+    "team_id": "TEAM-SRE",
+    "name": "Site Reliability Engineering",
+    "responsibilities": [
+      "monitoring",
+      "incident response",
+      "rollback readiness"
+    ]
+  },
+  {
+    "team_id": "TEAM-FINANCE",
+    "name": "Finance Systems",
+    "responsibilities": [
+      "finance application access",
+      "finance workflow"
+    ]
+  },
+  {
+    "team_id": "TEAM-DATA",
+    "name": "Data Services",
+    "responsibilities": [
+      "data pipelines",
+      "reporting APIs"
+    ]
+  }
+]

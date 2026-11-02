@@ -1,0 +1,66 @@
+[
+  {
+    "change_id": "CHG-001",
+    "title": "Identity directory API timeout tuning",
+    "services": [
+      "SVC-210",
+      "SVC-110"
+    ],
+    "outcome": "completed",
+    "incident_ids": [
+      "INC-001"
+    ],
+    "lesson": "Validate timeout behaviour and queue recovery."
+  },
+  {
+    "change_id": "CHG-002",
+    "title": "Notification gateway retry update",
+    "services": [
+      "SVC-120"
+    ],
+    "outcome": "completed",
+    "incident_ids": [
+      "INC-002"
+    ],
+    "lesson": "Test retry exhaustion and alerting."
+  },
+  {
+    "change_id": "CHG-003",
+    "title": "Approval workflow worker upgrade",
+    "services": [
+      "SVC-130",
+      "SVC-100"
+    ],
+    "outcome": "completed_with_followup",
+    "incident_ids": [
+      "INC-005"
+    ],
+    "lesson": "Document rollback steps and monitor queue depth."
+  },
+  {
+    "change_id": "CHG-004",
+    "title": "Audit event schema adjustment",
+    "services": [
+      "SVC-305"
+    ],
+    "outcome": "needs_review",
+    "incident_ids": [
+      "INC-004"
+    ],
+    "lesson": "Confirm audit completeness before closing the change."
+  },
+  {
+    "change_id": "CHG-005",
+    "title": "Finance gateway identity integration change",
+    "services": [
+      "SVC-220",
+      "SVC-110",
+      "SVC-210"
+    ],
+    "outcome": "completed_with_followup",
+    "incident_ids": [
+      "INC-003"
+    ],
+    "lesson": "Test access checks and service timeout paths."
+  }
+]

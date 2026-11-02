@@ -1,0 +1,583 @@
+[
+  {
+    "request_id": "CR-001",
+    "title": "Migrate employee onboarding approvals to new workflow service",
+    "description": "Replace the existing approval routing with a new internal workflow service. Employee access creation and notifications must continue to work.",
+    "target_services": [
+      "SVC-100",
+      "SVC-130"
+    ],
+    "requester_team": "TEAM-PEOPLE",
+    "deadline": "2026-12-15",
+    "provided_rollback_plan": false,
+    "provided_security_review": false,
+    "expected_dependency_ids": [
+      "SVC-100",
+      "SVC-110",
+      "SVC-120",
+      "SVC-130",
+      "SVC-210",
+      "SVC-410",
+      "SVC-305"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN",
+      "MISSING_SECURITY_REVIEW"
+    ]
+  },
+  {
+    "request_id": "CR-002",
+    "title": "Update finance access gateway to use a new identity API endpoint",
+    "description": "Change the identity endpoint used by the finance access gateway. The endpoint migration must preserve authorisation checks and audit logging.",
+    "target_services": [
+      "SVC-220",
+      "SVC-210"
+    ],
+    "requester_team": "TEAM-FINANCE",
+    "deadline": "2026-12-20",
+    "provided_rollback_plan": true,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-220",
+      "SVC-210",
+      "SVC-110",
+      "SVC-305"
+    ],
+    "expected_gap_codes": [
+      "OPEN_HIGH_SEVERITY_INCIDENT"
+    ]
+  },
+  {
+    "request_id": "CR-003",
+    "title": "Revise onboarding notification retry policy",
+    "description": "Adjust retry and alerting behaviour for onboarding notifications. No changes to employee entitlements are intended.",
+    "target_services": [
+      "SVC-120"
+    ],
+    "requester_team": "TEAM-PLATFORM",
+    "deadline": "2026-11-30",
+    "provided_rollback_plan": true,
+    "provided_security_review": false,
+    "expected_dependency_ids": [
+      "SVC-120"
+    ],
+    "expected_gap_codes": [
+      "MISSING_SECURITY_REVIEW"
+    ]
+  },
+  {
+    "request_id": "CR-004",
+    "title": "Modify audit event schema for onboarding completion",
+    "description": "Add fields to audit events emitted when onboarding status changes. Downstream reporting must continue to function.",
+    "target_services": [
+      "SVC-305",
+      "SVC-100"
+    ],
+    "requester_team": "TEAM-DATA",
+    "deadline": "2026-12-10",
+    "provided_rollback_plan": false,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-305",
+      "SVC-100",
+      "SVC-110",
+      "SVC-120",
+      "SVC-610",
+      "SVC-510"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN",
+      "OPEN_AUDIT_INCIDENT"
+    ]
+  },
+  {
+    "request_id": "CR-005",
+    "title": "Upgrade approval workflow workers",
+    "description": "Upgrade the worker runtime used by onboarding approvals. The change should not alter business rules.",
+    "target_services": [
+      "SVC-130"
+    ],
+    "requester_team": "TEAM-PLATFORM",
+    "deadline": "2026-12-05",
+    "provided_rollback_plan": true,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-130",
+      "SVC-100",
+      "SVC-110",
+      "SVC-410"
+    ],
+    "expected_gap_codes": [
+      "RELATED_HISTORICAL_INCIDENT"
+    ]
+  },
+  {
+    "request_id": "CR-006",
+    "title": "Migrate onboarding form validation library",
+    "description": "Update validation dependency in the onboarding portal.",
+    "target_services": [
+      "SVC-100"
+    ],
+    "requester_team": "TEAM-PEOPLE",
+    "deadline": "2027-01-19",
+    "provided_rollback_plan": false,
+    "provided_security_review": false,
+    "expected_dependency_ids": [
+      "SVC-100"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN",
+      "MISSING_SECURITY_REVIEW"
+    ]
+  },
+  {
+    "request_id": "CR-007",
+    "title": "Rotate credentials for identity directory integration",
+    "description": "Rotate service credentials and validate dependent access flows.",
+    "target_services": [
+      "SVC-210",
+      "SVC-110"
+    ],
+    "requester_team": "TEAM-IDENTITY",
+    "deadline": "2027-02-22",
+    "provided_rollback_plan": true,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-210",
+      "SVC-110"
+    ],
+    "expected_gap_codes": []
+  },
+  {
+    "request_id": "CR-008",
+    "title": "Change monitoring alert thresholds for approval queue",
+    "description": "Tune alert thresholds and confirm incident detection remains effective.",
+    "target_services": [
+      "SVC-410",
+      "SVC-130"
+    ],
+    "requester_team": "TEAM-SRE",
+    "deadline": "2027-03-25",
+    "provided_rollback_plan": true,
+    "provided_security_review": false,
+    "expected_dependency_ids": [
+      "SVC-410",
+      "SVC-130"
+    ],
+    "expected_gap_codes": [
+      "MISSING_SECURITY_REVIEW"
+    ]
+  },
+  {
+    "request_id": "CR-009",
+    "title": "Update employee onboarding completion report",
+    "description": "Modify reporting transformation for onboarding completion events.",
+    "target_services": [
+      "SVC-610",
+      "SVC-100"
+    ],
+    "requester_team": "TEAM-DATA",
+    "deadline": "2027-04-03",
+    "provided_rollback_plan": false,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-610",
+      "SVC-100"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN"
+    ]
+  },
+  {
+    "request_id": "CR-010",
+    "title": "Add audit logging to approval decision endpoint",
+    "description": "Ensure approval decisions emit required audit events.",
+    "target_services": [
+      "SVC-130",
+      "SVC-305"
+    ],
+    "requester_team": "TEAM-SECURITY",
+    "deadline": "2027-05-06",
+    "provided_rollback_plan": true,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-130",
+      "SVC-305"
+    ],
+    "expected_gap_codes": []
+  },
+  {
+    "request_id": "CR-011",
+    "title": "Update notification template service integration",
+    "description": "Change template integration while preserving notification delivery.",
+    "target_services": [
+      "SVC-120"
+    ],
+    "requester_team": "TEAM-PLATFORM",
+    "deadline": "2027-06-09",
+    "provided_rollback_plan": true,
+    "provided_security_review": false,
+    "expected_dependency_ids": [
+      "SVC-120"
+    ],
+    "expected_gap_codes": [
+      "MISSING_SECURITY_REVIEW"
+    ]
+  },
+  {
+    "request_id": "CR-012",
+    "title": "Introduce additional finance access validation",
+    "description": "Add a validation step to finance access checks.",
+    "target_services": [
+      "SVC-220",
+      "SVC-110"
+    ],
+    "requester_team": "TEAM-FINANCE",
+    "deadline": "2027-01-12",
+    "provided_rollback_plan": false,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-220",
+      "SVC-110"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN"
+    ]
+  },
+  {
+    "request_id": "CR-013",
+    "title": "Move onboarding metrics to new reporting endpoint",
+    "description": "Change the reporting endpoint used for onboarding metrics.",
+    "target_services": [
+      "SVC-610",
+      "SVC-305"
+    ],
+    "requester_team": "TEAM-DATA",
+    "deadline": "2027-02-15",
+    "provided_rollback_plan": true,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-610",
+      "SVC-305"
+    ],
+    "expected_gap_codes": []
+  },
+  {
+    "request_id": "CR-014",
+    "title": "Update employee access expiry rules",
+    "description": "Change expiry handling for employee access entitlements.",
+    "target_services": [
+      "SVC-110",
+      "SVC-210"
+    ],
+    "requester_team": "TEAM-IDENTITY",
+    "deadline": "2027-03-18",
+    "provided_rollback_plan": false,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-110",
+      "SVC-210"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN"
+    ]
+  },
+  {
+    "request_id": "CR-015",
+    "title": "Revise rollback runbook for workflow deployment",
+    "description": "Update documented rollback instructions for the approval workflow.",
+    "target_services": [
+      "SVC-130"
+    ],
+    "requester_team": "TEAM-SRE",
+    "deadline": "2027-04-21",
+    "provided_rollback_plan": true,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-130"
+    ],
+    "expected_gap_codes": []
+  },
+  {
+    "request_id": "CR-016",
+    "title": "Migrate onboarding form validation library",
+    "description": "Update validation dependency in the onboarding portal.",
+    "target_services": [
+      "SVC-100"
+    ],
+    "requester_team": "TEAM-PEOPLE",
+    "deadline": "2027-05-24",
+    "provided_rollback_plan": false,
+    "provided_security_review": false,
+    "expected_dependency_ids": [
+      "SVC-100"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN",
+      "MISSING_SECURITY_REVIEW"
+    ]
+  },
+  {
+    "request_id": "CR-017",
+    "title": "Rotate credentials for identity directory integration",
+    "description": "Rotate service credentials and validate dependent access flows.",
+    "target_services": [
+      "SVC-210",
+      "SVC-110"
+    ],
+    "requester_team": "TEAM-IDENTITY",
+    "deadline": "2027-06-02",
+    "provided_rollback_plan": true,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-210",
+      "SVC-110"
+    ],
+    "expected_gap_codes": []
+  },
+  {
+    "request_id": "CR-018",
+    "title": "Change monitoring alert thresholds for approval queue",
+    "description": "Tune alert thresholds and confirm incident detection remains effective.",
+    "target_services": [
+      "SVC-410",
+      "SVC-130"
+    ],
+    "requester_team": "TEAM-SRE",
+    "deadline": "2027-01-05",
+    "provided_rollback_plan": true,
+    "provided_security_review": false,
+    "expected_dependency_ids": [
+      "SVC-410",
+      "SVC-130"
+    ],
+    "expected_gap_codes": [
+      "MISSING_SECURITY_REVIEW"
+    ]
+  },
+  {
+    "request_id": "CR-019",
+    "title": "Update employee onboarding completion report",
+    "description": "Modify reporting transformation for onboarding completion events.",
+    "target_services": [
+      "SVC-610",
+      "SVC-100"
+    ],
+    "requester_team": "TEAM-DATA",
+    "deadline": "2027-02-08",
+    "provided_rollback_plan": false,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-610",
+      "SVC-100"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN"
+    ]
+  },
+  {
+    "request_id": "CR-020",
+    "title": "Add audit logging to approval decision endpoint",
+    "description": "Ensure approval decisions emit required audit events.",
+    "target_services": [
+      "SVC-130",
+      "SVC-305"
+    ],
+    "requester_team": "TEAM-SECURITY",
+    "deadline": "2027-03-11",
+    "provided_rollback_plan": true,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-130",
+      "SVC-305"
+    ],
+    "expected_gap_codes": []
+  },
+  {
+    "request_id": "CR-021",
+    "title": "Update notification template service integration",
+    "description": "Change template integration while preserving notification delivery.",
+    "target_services": [
+      "SVC-120"
+    ],
+    "requester_team": "TEAM-PLATFORM",
+    "deadline": "2027-04-14",
+    "provided_rollback_plan": true,
+    "provided_security_review": false,
+    "expected_dependency_ids": [
+      "SVC-120"
+    ],
+    "expected_gap_codes": [
+      "MISSING_SECURITY_REVIEW"
+    ]
+  },
+  {
+    "request_id": "CR-022",
+    "title": "Introduce additional finance access validation",
+    "description": "Add a validation step to finance access checks.",
+    "target_services": [
+      "SVC-220",
+      "SVC-110"
+    ],
+    "requester_team": "TEAM-FINANCE",
+    "deadline": "2027-05-17",
+    "provided_rollback_plan": false,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-220",
+      "SVC-110"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN"
+    ]
+  },
+  {
+    "request_id": "CR-023",
+    "title": "Move onboarding metrics to new reporting endpoint",
+    "description": "Change the reporting endpoint used for onboarding metrics.",
+    "target_services": [
+      "SVC-610",
+      "SVC-305"
+    ],
+    "requester_team": "TEAM-DATA",
+    "deadline": "2027-06-20",
+    "provided_rollback_plan": true,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-610",
+      "SVC-305"
+    ],
+    "expected_gap_codes": []
+  },
+  {
+    "request_id": "CR-024",
+    "title": "Update employee access expiry rules",
+    "description": "Change expiry handling for employee access entitlements.",
+    "target_services": [
+      "SVC-110",
+      "SVC-210"
+    ],
+    "requester_team": "TEAM-IDENTITY",
+    "deadline": "2027-01-23",
+    "provided_rollback_plan": false,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-110",
+      "SVC-210"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN"
+    ]
+  },
+  {
+    "request_id": "CR-025",
+    "title": "Revise rollback runbook for workflow deployment",
+    "description": "Update documented rollback instructions for the approval workflow.",
+    "target_services": [
+      "SVC-130"
+    ],
+    "requester_team": "TEAM-SRE",
+    "deadline": "2027-02-01",
+    "provided_rollback_plan": true,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-130"
+    ],
+    "expected_gap_codes": []
+  },
+  {
+    "request_id": "CR-026",
+    "title": "Migrate onboarding form validation library",
+    "description": "Update validation dependency in the onboarding portal.",
+    "target_services": [
+      "SVC-100"
+    ],
+    "requester_team": "TEAM-PEOPLE",
+    "deadline": "2027-03-04",
+    "provided_rollback_plan": false,
+    "provided_security_review": false,
+    "expected_dependency_ids": [
+      "SVC-100"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN",
+      "MISSING_SECURITY_REVIEW"
+    ]
+  },
+  {
+    "request_id": "CR-027",
+    "title": "Rotate credentials for identity directory integration",
+    "description": "Rotate service credentials and validate dependent access flows.",
+    "target_services": [
+      "SVC-210",
+      "SVC-110"
+    ],
+    "requester_team": "TEAM-IDENTITY",
+    "deadline": "2027-04-07",
+    "provided_rollback_plan": true,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-210",
+      "SVC-110"
+    ],
+    "expected_gap_codes": []
+  },
+  {
+    "request_id": "CR-028",
+    "title": "Change monitoring alert thresholds for approval queue",
+    "description": "Tune alert thresholds and confirm incident detection remains effective.",
+    "target_services": [
+      "SVC-410",
+      "SVC-130"
+    ],
+    "requester_team": "TEAM-SRE",
+    "deadline": "2027-05-10",
+    "provided_rollback_plan": true,
+    "provided_security_review": false,
+    "expected_dependency_ids": [
+      "SVC-410",
+      "SVC-130"
+    ],
+    "expected_gap_codes": [
+      "MISSING_SECURITY_REVIEW"
+    ]
+  },
+  {
+    "request_id": "CR-029",
+    "title": "Update employee onboarding completion report",
+    "description": "Modify reporting transformation for onboarding completion events.",
+    "target_services": [
+      "SVC-610",
+      "SVC-100"
+    ],
+    "requester_team": "TEAM-DATA",
+    "deadline": "2027-06-13",
+    "provided_rollback_plan": false,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-610",
+      "SVC-100"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN"
+    ]
+  },
+  {
+    "request_id": "CR-030",
+    "title": "Add audit logging to approval decision endpoint",
+    "description": "Ensure approval decisions emit required audit events.",
+    "target_services": [
+      "SVC-130",
+      "SVC-305"
+    ],
+    "requester_team": "TEAM-SECURITY",
+    "deadline": "2027-01-16",
+    "provided_rollback_plan": true,
+    "provided_security_review": true,
+    "expected_dependency_ids": [
+      "SVC-130",
+      "SVC-305"
+    ],
+    "expected_gap_codes": []
+  }
+]

@@ -1,0 +1,518 @@
+[
+  {
+    "case_id": "EVAL-001",
+    "request_id": "CR-001",
+    "user_request": "Migrate employee onboarding approvals to new workflow service. Replace the existing approval routing with a new internal workflow service. Employee access creation and notifications must continue to work.",
+    "expected_target_services": [
+      "SVC-100",
+      "SVC-130"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN",
+      "MISSING_SECURITY_REVIEW"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-002",
+    "request_id": "CR-002",
+    "user_request": "Update finance access gateway to use a new identity API endpoint. Change the identity endpoint used by the finance access gateway. The endpoint migration must preserve authorisation checks and audit logging.",
+    "expected_target_services": [
+      "SVC-220",
+      "SVC-210"
+    ],
+    "expected_gap_codes": [
+      "OPEN_HIGH_SEVERITY_INCIDENT"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-003",
+    "request_id": "CR-003",
+    "user_request": "Revise onboarding notification retry policy. Adjust retry and alerting behaviour for onboarding notifications. No changes to employee entitlements are intended.",
+    "expected_target_services": [
+      "SVC-120"
+    ],
+    "expected_gap_codes": [
+      "MISSING_SECURITY_REVIEW"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-004",
+    "request_id": "CR-004",
+    "user_request": "Modify audit event schema for onboarding completion. Add fields to audit events emitted when onboarding status changes. Downstream reporting must continue to function.",
+    "expected_target_services": [
+      "SVC-305",
+      "SVC-100"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN",
+      "OPEN_AUDIT_INCIDENT"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-005",
+    "request_id": "CR-005",
+    "user_request": "Upgrade approval workflow workers. Upgrade the worker runtime used by onboarding approvals. The change should not alter business rules.",
+    "expected_target_services": [
+      "SVC-130"
+    ],
+    "expected_gap_codes": [
+      "RELATED_HISTORICAL_INCIDENT"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-006",
+    "request_id": "CR-006",
+    "user_request": "Migrate onboarding form validation library. Update validation dependency in the onboarding portal.",
+    "expected_target_services": [
+      "SVC-100"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN",
+      "MISSING_SECURITY_REVIEW"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-007",
+    "request_id": "CR-007",
+    "user_request": "Rotate credentials for identity directory integration. Rotate service credentials and validate dependent access flows.",
+    "expected_target_services": [
+      "SVC-210",
+      "SVC-110"
+    ],
+    "expected_gap_codes": [],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-008",
+    "request_id": "CR-008",
+    "user_request": "Change monitoring alert thresholds for approval queue. Tune alert thresholds and confirm incident detection remains effective.",
+    "expected_target_services": [
+      "SVC-410",
+      "SVC-130"
+    ],
+    "expected_gap_codes": [
+      "MISSING_SECURITY_REVIEW"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-009",
+    "request_id": "CR-009",
+    "user_request": "Update employee onboarding completion report. Modify reporting transformation for onboarding completion events.",
+    "expected_target_services": [
+      "SVC-610",
+      "SVC-100"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-010",
+    "request_id": "CR-010",
+    "user_request": "Add audit logging to approval decision endpoint. Ensure approval decisions emit required audit events.",
+    "expected_target_services": [
+      "SVC-130",
+      "SVC-305"
+    ],
+    "expected_gap_codes": [],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-011",
+    "request_id": "CR-011",
+    "user_request": "Update notification template service integration. Change template integration while preserving notification delivery.",
+    "expected_target_services": [
+      "SVC-120"
+    ],
+    "expected_gap_codes": [
+      "MISSING_SECURITY_REVIEW"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-012",
+    "request_id": "CR-012",
+    "user_request": "Introduce additional finance access validation. Add a validation step to finance access checks.",
+    "expected_target_services": [
+      "SVC-220",
+      "SVC-110"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-013",
+    "request_id": "CR-013",
+    "user_request": "Move onboarding metrics to new reporting endpoint. Change the reporting endpoint used for onboarding metrics.",
+    "expected_target_services": [
+      "SVC-610",
+      "SVC-305"
+    ],
+    "expected_gap_codes": [],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-014",
+    "request_id": "CR-014",
+    "user_request": "Update employee access expiry rules. Change expiry handling for employee access entitlements.",
+    "expected_target_services": [
+      "SVC-110",
+      "SVC-210"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-015",
+    "request_id": "CR-015",
+    "user_request": "Revise rollback runbook for workflow deployment. Update documented rollback instructions for the approval workflow.",
+    "expected_target_services": [
+      "SVC-130"
+    ],
+    "expected_gap_codes": [],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-016",
+    "request_id": "CR-016",
+    "user_request": "Migrate onboarding form validation library. Update validation dependency in the onboarding portal.",
+    "expected_target_services": [
+      "SVC-100"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN",
+      "MISSING_SECURITY_REVIEW"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-017",
+    "request_id": "CR-017",
+    "user_request": "Rotate credentials for identity directory integration. Rotate service credentials and validate dependent access flows.",
+    "expected_target_services": [
+      "SVC-210",
+      "SVC-110"
+    ],
+    "expected_gap_codes": [],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-018",
+    "request_id": "CR-018",
+    "user_request": "Change monitoring alert thresholds for approval queue. Tune alert thresholds and confirm incident detection remains effective.",
+    "expected_target_services": [
+      "SVC-410",
+      "SVC-130"
+    ],
+    "expected_gap_codes": [
+      "MISSING_SECURITY_REVIEW"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-019",
+    "request_id": "CR-019",
+    "user_request": "Update employee onboarding completion report. Modify reporting transformation for onboarding completion events.",
+    "expected_target_services": [
+      "SVC-610",
+      "SVC-100"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-020",
+    "request_id": "CR-020",
+    "user_request": "Add audit logging to approval decision endpoint. Ensure approval decisions emit required audit events.",
+    "expected_target_services": [
+      "SVC-130",
+      "SVC-305"
+    ],
+    "expected_gap_codes": [],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-021",
+    "request_id": "CR-021",
+    "user_request": "Update notification template service integration. Change template integration while preserving notification delivery.",
+    "expected_target_services": [
+      "SVC-120"
+    ],
+    "expected_gap_codes": [
+      "MISSING_SECURITY_REVIEW"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-022",
+    "request_id": "CR-022",
+    "user_request": "Introduce additional finance access validation. Add a validation step to finance access checks.",
+    "expected_target_services": [
+      "SVC-220",
+      "SVC-110"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-023",
+    "request_id": "CR-023",
+    "user_request": "Move onboarding metrics to new reporting endpoint. Change the reporting endpoint used for onboarding metrics.",
+    "expected_target_services": [
+      "SVC-610",
+      "SVC-305"
+    ],
+    "expected_gap_codes": [],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-024",
+    "request_id": "CR-024",
+    "user_request": "Update employee access expiry rules. Change expiry handling for employee access entitlements.",
+    "expected_target_services": [
+      "SVC-110",
+      "SVC-210"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-025",
+    "request_id": "CR-025",
+    "user_request": "Revise rollback runbook for workflow deployment. Update documented rollback instructions for the approval workflow.",
+    "expected_target_services": [
+      "SVC-130"
+    ],
+    "expected_gap_codes": [],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-026",
+    "request_id": "CR-026",
+    "user_request": "Migrate onboarding form validation library. Update validation dependency in the onboarding portal.",
+    "expected_target_services": [
+      "SVC-100"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN",
+      "MISSING_SECURITY_REVIEW"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-027",
+    "request_id": "CR-027",
+    "user_request": "Rotate credentials for identity directory integration. Rotate service credentials and validate dependent access flows.",
+    "expected_target_services": [
+      "SVC-210",
+      "SVC-110"
+    ],
+    "expected_gap_codes": [],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-028",
+    "request_id": "CR-028",
+    "user_request": "Change monitoring alert thresholds for approval queue. Tune alert thresholds and confirm incident detection remains effective.",
+    "expected_target_services": [
+      "SVC-410",
+      "SVC-130"
+    ],
+    "expected_gap_codes": [
+      "MISSING_SECURITY_REVIEW"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-029",
+    "request_id": "CR-029",
+    "user_request": "Update employee onboarding completion report. Modify reporting transformation for onboarding completion events.",
+    "expected_target_services": [
+      "SVC-610",
+      "SVC-100"
+    ],
+    "expected_gap_codes": [
+      "MISSING_ROLLBACK_PLAN"
+    ],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  },
+  {
+    "case_id": "EVAL-030",
+    "request_id": "CR-030",
+    "user_request": "Add audit logging to approval decision endpoint. Ensure approval decisions emit required audit events.",
+    "expected_target_services": [
+      "SVC-130",
+      "SVC-305"
+    ],
+    "expected_gap_codes": [],
+    "expected_findings": [
+      "List only dependencies supported by service records or source documents.",
+      "Cite retrieved evidence for policy-related claims.",
+      "Do not claim the change is approved."
+    ],
+    "notes": "Synthetic evaluation case; expected labels are starter annotations and should be reviewed as the graph and rules are refined."
+  }
+]

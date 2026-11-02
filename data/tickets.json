@@ -1,0 +1,77 @@
+[
+  {
+    "ticket_id": "INC-001",
+    "title": "Delayed employee access provisioning",
+    "service_id": "SVC-110",
+    "status": "resolved",
+    "severity": "medium",
+    "summary": "Provisioning queue grew after a directory API timeout.",
+    "tags": [
+      "access",
+      "directory",
+      "timeout"
+    ]
+  },
+  {
+    "ticket_id": "INC-002",
+    "title": "Approval notifications not delivered",
+    "service_id": "SVC-120",
+    "status": "closed",
+    "severity": "low",
+    "summary": "Notification retries were exhausted during a gateway interruption.",
+    "tags": [
+      "notification",
+      "retry"
+    ]
+  },
+  {
+    "ticket_id": "INC-003",
+    "title": "Finance access checks intermittently failed",
+    "service_id": "SVC-220",
+    "status": "open",
+    "severity": "high",
+    "summary": "Some finance access checks timed out while querying identity services.",
+    "tags": [
+      "finance",
+      "identity",
+      "timeout"
+    ]
+  },
+  {
+    "ticket_id": "INC-004",
+    "title": "Audit events missing for workflow updates",
+    "service_id": "SVC-305",
+    "status": "investigating",
+    "severity": "high",
+    "summary": "A subset of workflow updates did not appear in the audit store.",
+    "tags": [
+      "audit",
+      "workflow",
+      "logging"
+    ]
+  },
+  {
+    "ticket_id": "INC-005",
+    "title": "Onboarding approval queue stalled",
+    "service_id": "SVC-130",
+    "status": "resolved",
+    "severity": "medium",
+    "summary": "A workflow worker restart cleared a queue backlog; root cause was not confirmed.",
+    "tags": [
+      "approval",
+      "queue"
+    ]
+  },
+  {
+    "ticket_id": "INC-006",
+    "title": "Monitoring alert threshold too sensitive",
+    "service_id": "SVC-410",
+    "status": "closed",
+    "severity": "low",
+    "summary": "A noisy alert rule was adjusted after expected onboarding spikes.",
+    "tags": [
+      "monitoring",
+      "alerting"
+    ]
+  }
+]

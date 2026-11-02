@@ -1,0 +1,102 @@
+[
+  {
+    "service_id": "SVC-100",
+    "name": "Employee Onboarding Portal",
+    "owner_team": "TEAM-PEOPLE",
+    "depends_on": [
+      "SVC-110",
+      "SVC-120"
+    ],
+    "criticality": "medium",
+    "description": "Collects onboarding information and initiates employee setup."
+  },
+  {
+    "service_id": "SVC-110",
+    "name": "Employee Access Service",
+    "owner_team": "TEAM-IDENTITY",
+    "depends_on": [
+      "SVC-210"
+    ],
+    "criticality": "high",
+    "description": "Creates and updates employee access entitlements."
+  },
+  {
+    "service_id": "SVC-120",
+    "name": "Notification Gateway",
+    "owner_team": "TEAM-PLATFORM",
+    "depends_on": [],
+    "criticality": "medium",
+    "description": "Sends onboarding notifications."
+  },
+  {
+    "service_id": "SVC-130",
+    "name": "Onboarding Approval Workflow",
+    "owner_team": "TEAM-PLATFORM",
+    "depends_on": [
+      "SVC-100",
+      "SVC-110"
+    ],
+    "criticality": "high",
+    "description": "Routes onboarding approvals to authorised approvers."
+  },
+  {
+    "service_id": "SVC-210",
+    "name": "Identity Directory API",
+    "owner_team": "TEAM-IDENTITY",
+    "depends_on": [],
+    "criticality": "high",
+    "description": "Internal API for employee identity records."
+  },
+  {
+    "service_id": "SVC-220",
+    "name": "Finance Access Gateway",
+    "owner_team": "TEAM-FINANCE",
+    "depends_on": [
+      "SVC-110",
+      "SVC-210"
+    ],
+    "criticality": "high",
+    "description": "Enforces access checks for finance applications."
+  },
+  {
+    "service_id": "SVC-305",
+    "name": "Audit Event Store",
+    "owner_team": "TEAM-DATA",
+    "depends_on": [],
+    "criticality": "high",
+    "description": "Stores security and workflow audit events."
+  },
+  {
+    "service_id": "SVC-410",
+    "name": "Operations Monitoring",
+    "owner_team": "TEAM-SRE",
+    "depends_on": [
+      "SVC-100",
+      "SVC-110",
+      "SVC-130"
+    ],
+    "criticality": "medium",
+    "description": "Collects health and workflow metrics."
+  },
+  {
+    "service_id": "SVC-510",
+    "name": "Change Management API",
+    "owner_team": "TEAM-PLATFORM",
+    "depends_on": [
+      "SVC-305"
+    ],
+    "criticality": "medium",
+    "description": "Stores change requests and review records."
+  },
+  {
+    "service_id": "SVC-610",
+    "name": "Employee Reporting Pipeline",
+    "owner_team": "TEAM-DATA",
+    "depends_on": [
+      "SVC-100",
+      "SVC-305"
+    ],
+    "criticality": "low",
+    "description": "Aggregates onboarding completion metrics."
+  }
+]

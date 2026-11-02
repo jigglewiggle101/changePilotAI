@@ -1,0 +1,33 @@
+{
+  "dataset_strategy": "Hybrid: public reference publications + synthetic linked enterprise records.",
+  "public_references": [
+    {
+      "name": "NIST SP 800-128 Rev. 1: Guide for Security-Focused Configuration Management of Information Systems",
+      "url": "https://csrc.nist.gov/pubs/sp/800/128/r1/final",
+      "intended_use": "Reference concepts for change/configuration management; review original publication and terms before redistributing any copied text.",
+      "downloaded_into_pack": false
+    },
+    {
+      "name": "Google Site Reliability Engineering books",
+      "url": "https://sre.google/books/",
+      "intended_use": "Reference concepts for reliability, monitoring and incident response; this pack contains original fictional summaries, not copied book chapters.",
+      "downloaded_into_pack": false
+    },
+    {
+      "name": "OWASP GenAI Security Project",
+      "url": "https://genai.owasp.org/",
+      "intended_use": "Reference for LLM application security and prompt-injection test design.",
+      "downloaded_into_pack": false
+    }
+  ],
+  "synthetic_files": [
+    "data/teams.json",
+    "data/services.json",
+    "data/tickets.json",
+    "data/change_history.json",
+    "data/change_requests.json",
+    "data/evaluation_cases.json",
+    "data/policies/"
+  ],
+  "disclaimer": "All company names, services, tickets, requests, owners, dates, incidents and policy contents in this starter pack are fictional synthetic examples. Public references are pointers for further reading, not a claim that live web access or downloads were performed."
+}
